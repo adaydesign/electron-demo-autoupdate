@@ -29,6 +29,12 @@ const createWindow = () => {
     // when you should delete the corresponding element.
     mainWindow = null;
   });
+
+  require('update-electron-app')({
+    repo: 'adaydesign/electron-demo-autoupdate',
+    updateInterval: '1 hour',
+    logger: require('electron-log')
+  })
 };
 
 // This method will be called when Electron has finished
